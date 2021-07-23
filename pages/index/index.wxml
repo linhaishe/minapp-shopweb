@@ -1,3 +1,14 @@
 <view class="yg_index">
+    <!-- 搜索框 -->
     <SearchInput></SearchInput>
+    <!-- 轮播图 -->
+    <view class="index_swiper">
+        <swiper class="" indicator-dots autoplay interval="5000" duration="500" circular>
+            <swiper-item class="" item-id="" wx:for="{{swiperlist}}" wx:key="goods_id">
+                <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+                    <image class="" src="{{item.image_src}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+                </navigator>
+            </swiper-item>
+        </swiper>
+    </view>
 </view>
