@@ -1,38 +1,19 @@
 //Page Object
 Page({
   data: {
-    
+    //轮播图数组
+    swiperlist: [],
   },
-  //options(Object)
-  onLoad: function(options){
-    
-  },
-  onReady: function(){
-    
-  },
-  onShow: function(){
-    
-  },
-  onHide: function(){
 
+  onLoad: function (options) {
+    wx.request({
+      url: "https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata",
+      success: (res) => {
+        console.log(res);
+        this.setData({
+          swiperlist: res.data.message,
+        });
+      },
+    });
   },
-  onUnload: function(){
-
-  },
-  onPullDownRefresh: function(){
-
-  },
-  onReachBottom: function(){
-
-  },
-  onShareAppMessage: function(){
-
-  },
-  onPageScroll: function(){
-
-  },
-  //item(index,pagePath,text)
-  onTabItemTap:function(item){
-
-  }
 });
