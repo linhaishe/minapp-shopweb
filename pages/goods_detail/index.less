@@ -1,0 +1,113 @@
+/* pages/goods_detail/index.wxss */
+page {
+  padding-bottom: 90rpx;
+}
+.goods_detail_swiper {
+  swiper {
+    height: 65vw;
+    text-align: center;
+    //border: 1px solid red;
+    image {
+      // height: 70rpx;
+      width: 60%;
+      //border: 1px solid green;
+    }
+  }
+}
+
+.goods_price {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 10rpx;
+  color: var(--themeColor);
+}
+
+.goodsName_row {
+  border-top: 5rpx solid #dedede;
+  border-bottom: 5rpx solid #dedede;
+  padding: 10rpx 0;
+  display: flex;
+  .good_name {
+    flex: 5;
+    color: #000;
+    font-size: 30rpx;
+    padding: 0 10rpx;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .collection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1rpx solid #000;
+    .icon-shoucang2 {
+      //color: orangered;
+    }
+  }
+}
+
+.goods_info {
+  .goods_info_title {
+    font-size: 32rpx;
+    color: var(--themeColor);
+    font-weight: 600;
+    padding: 20rpx;
+  }
+  .goods_info_content {
+  }
+}
+
+.btm_tool {
+  border-top: 1rpx solid #ccc;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+  .tool_item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24rpx;
+    position: relative;
+    //button 进行隐藏，并使得宽高和父元素相同，使得底部具有点击功能
+    button {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+  .btn_cart {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffa500;
+    color: #fff;
+    font-size: 30rpx;
+    font-weight: 600;
+  }
+  .btn_buy {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eb4450;
+    color: #fff;
+    font-size: 30rpx;
+    font-weight: 600;
+  }
+}
