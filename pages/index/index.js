@@ -14,7 +14,7 @@ Page({
   onLoad: function (options) {
     //原装写法
     // wx.request({
-    //   url: "https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata",
+    //   url: "/home/swiperdata",
     //   success: (res) => {
     //     console.log(res);
     //     this.setData({
@@ -32,7 +32,7 @@ Page({
   getSwiperList() {
     //封装写法
     request({
-      url: "https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata",
+      url: "/home/swiperdata",
     }).then((result) => {
       this.setData({
         swiperlist: result.data.message,
@@ -42,7 +42,7 @@ Page({
   //获取分类菜列表
   getCatesList() {
     request({
-      url: "https://api-hmugo-web.itheima.net/api/public/v1/home/catitems",
+      url: "/home/catitems",
     }).then((result) => {
       this.setData({
         catesList: result.data.message,
@@ -53,7 +53,7 @@ Page({
   //获取楼层数据
   getFloorList() {
     request({
-      url: "https://api-hmugo-web.itheima.net/api/public/v1/home/floordata",
+      url: "/home/floordata",
     }).then((result) => {
       this.setData({
         floorList: result.data.message,

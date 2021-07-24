@@ -27,3 +27,7 @@ page {
 
   font-size: 28rpx;
 }
+
+image {
+  width: 100%;
+}
