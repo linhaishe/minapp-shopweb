@@ -7,6 +7,7 @@ Page({
   },
   onShow() {
     const userinfo = wx.getStorageSync("userinfo");
+    //获取缓存中的商品收藏信息
     const collect = wx.getStorageSync("collect") || [];
 
     this.setData({ userinfo, collectNums: collect.length });
