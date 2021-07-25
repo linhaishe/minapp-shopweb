@@ -77,6 +77,12 @@
           "pathName": "pages/index/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "问题反馈",
+          "pathName": "pages/feedback/index",
+          "query": "",
+          "scene": null
         }
       ]
     }
