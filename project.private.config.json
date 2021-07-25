@@ -25,8 +25,26 @@
           "scene": null
         },
         {
-          "name": "pages/cart/index",
-          "pathName": "pages/cart/index",
+          "name": "pages/pay/index",
+          "pathName": "pages/pay/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "添加授权",
+          "pathName": "pages/auth/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/login/index",
+          "pathName": "pages/login/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/index",
+          "pathName": "pages/user/index",
           "query": "",
           "scene": null
         }
