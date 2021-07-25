@@ -45,7 +45,7 @@ Page({
     // 3 获取url上的type参数
     const { type } = currentPage.options;
     // 4 激活选中页面标题 当 type=1 index=0
-    // this.changeTitleByIndex(type - 1);
+    this.changeTitleByIndex(type - 1);
     this.getOrders(type);
   },
   //获取订单列表
@@ -54,17 +54,17 @@ Page({
     const res = await request({ url: "/my/orders/all", data: { type } });
     console.log(res);
     this.setData({
-      orders: res.data.message.orders,
-      // orders: res.orders.map((v) => ({
-      //   ...v,
-      //   create_time_cn: new Date(v.create_time * 1000).toLocaleString(),
-      // })),
+      //  orders: res.data.message.orders,
+      orders: res.data.message.orders.map((v) => ({
+        ...v,
+        create_time_cn: new Date(v.create_time * 1000).toLocaleString(),
+      })),
     });
+    console.log("订单处理后的数据", this.data.orders);
   },
 
-  //标题点击事件
-  handleTabsItemChange(e) {
-    const { index } = e.detail;
+  // 根据标题索引来激活选中 标题数组
+  changeTitleByIndex(index) {
     let { tabs } = this.data;
     tabs.forEach((v, i) =>
       i === index ? (v.isActive = true) : (v.isActive = false)
@@ -72,5 +72,12 @@ Page({
     this.setData({
       tabs,
     });
+  },
+  //标题点击事件
+  handleTabsItemChange(e) {
+    const { index } = e.detail;
+    this.changeTitleByIndex(index);
+    // 2 重新发送请求 type=1 index=0
+    this.getOrders(index + 1);
   },
 });
