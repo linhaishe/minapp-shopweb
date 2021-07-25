@@ -47,6 +47,12 @@
           "pathName": "pages/user/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/order/index",
+          "pathName": "pages/order/index",
+          "query": "type=1",
+          "scene": null
         }
       ]
     }
