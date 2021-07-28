@@ -135,9 +135,10 @@ Page({
           // 顺带的文本信息
           formData: {},
           success: (result) => {
-            console.log(result);
+            console.log(999, result);
             let url = JSON.parse(result.data).data.url;
             this.UpLoadImgs.push(url);
+            console.log(1000, url);
 
             // 所有的图片都上传完毕了才触发
             if (i === chooseImgs.length - 1) {

@@ -13,7 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
 
-  //此方法不能使用，返回的是匿名用户数据
+  //此方法不能使用，返回  的是匿名用户数据
   // getUserInfo(e) {
   //   const { userInfo } = e.detail;
   //   wx.setStorageSync("userinfo", userInfo);
